@@ -12,14 +12,14 @@ function Article(props) {
                 {
 
                     Object.keys(db).map(elem => {
-                        return(
+                        return (
                             <div className='card' key={elem}>
                                 <img src={db[elem].photo} alt="Photo" />
                                 <div className='name'>Name: {db[elem].name} {db[elem].surname}</div>
                                 <div className='gender'>Gender: <img src={db[elem].pol === 'male' ? male : female} alt="Gender" /></div>
                                 <div className='age'>Age: {db[elem].age}</div>
                             </div>
-                        )    
+                        )
                     })
                 }
                 {/* <div className='card'>
@@ -54,7 +54,8 @@ function Article(props) {
     )
 }
 
-Article.defaultProps = {
+Article.defaultProps =
+{
     title: 'Заголовок статьи',
     content: 'Содержимое статьи'
 };
